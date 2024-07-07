@@ -7,5 +7,9 @@ interface ProvidersProps {
 }
 
 export default function Providers({ children }: ProvidersProps) {
-
+  return (
+    <NextUIProvider>
+      {children}
+    </NextUIProvider>
+  )
 }
