@@ -15,9 +15,21 @@ export default async function Header() {
 
   let authContent: React.ReactNode;
   if (session?.user) {
-    authContent = <div>User Image</div>
+    authContent = <Avatar src={session.user.image || ''}/>
   } else {
-    authContent = <div>Signin/signout</div>
+    authContent = <>
+      <NavbarItem>
+        <Button type="submit" color="secondary" variant="bordered">
+          Sign In
+        </Button>
+      </NavbarItem>
+
+      <NavbarItem>
+        <Button type="submit" color="primary" variant="flat">
+          Sign Up
+        </Button>
+      </NavbarItem>
+    </>
   }
 
   return (
@@ -33,9 +45,7 @@ export default async function Header() {
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <NavbarItem>
-          {authContent}
-        </NavbarItem>
+        {authContent}
       </NavbarContent>
     </Navbar>
   )
