@@ -39,6 +39,9 @@ export default function TopicCreateForm() {
               isInvalid={!!formState.errors.description}
               errorMessage={formState.errors.description?.join(', ')}
             />
+
+            {formState.errors._form?.join(', ')}
+
             <Button type="submit">Submit</Button>
           </div>
         </form>
