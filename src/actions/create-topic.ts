@@ -14,7 +14,7 @@ export async function createTopic(formData: FormData) {
   })
 
   if (!result.success) {
-    console.log(result.error);
+    console.log(result.error.flatten().fieldErrors);
   }
   
   //TODO: revalidate the homepage
