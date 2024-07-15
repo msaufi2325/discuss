@@ -18,7 +18,7 @@ export default async function TopicList() {
     )
   })
 
-  return <div className="flex flex-row gap-2">
+  return <div className="flex flex-row flex-wrap gap-2">
     {renderedTopics}
   </div>
 }
