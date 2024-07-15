@@ -1,4 +1,5 @@
 import TopicCreateForm from "@/components/topics/topic-create-form"
+import TopicList from "@/components/topics/topic-list"
 
 export default function Home() {
   return <div className="grid grid-cols-4 gap-4 p-4">
@@ -7,6 +8,7 @@ export default function Home() {
     </div>
     <div>
       <TopicCreateForm />
+      <TopicList />
     </div>
   </div>
 }
