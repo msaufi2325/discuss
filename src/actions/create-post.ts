@@ -32,6 +32,15 @@ export async function createPost(formState: CreatePostFormState, formData: FormD
     }
   }
 
+  const session = await auth();
+  if (!session || !session.user) {
+    return {
+      errors: {
+        _form: ['You must be signed in to create a post'],
+      },
+    };
+  }
+
   return {
     errors: {}
   }
