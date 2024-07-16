@@ -29,13 +29,13 @@ export default function PostCreateForm() {
               name="title"
               label="Title"
               labelPlacement="outside"
-              placeholder="Title'"
+              placeholder="Enter a title"
             />
             <Input 
               name="content"
               label="Content"
               labelPlacement="outside"
-              placeholder="Content"
+              placeholder="Enter content"
             />
 
             <FormButton>Create Post</FormButton>
