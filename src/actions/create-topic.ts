@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation';
 import { z } from 'zod';
 import { auth } from '@/auth';
 import { db } from '@/db';
-import paths from '@/path';
+import paths from '@/paths';
 
 const createTopicSchema = z.object({
   name: z.string().min(3).regex(/^[a-z-]+$/, { message: 'Only lowercase letters and hyphens without dashed are allowed' }),
