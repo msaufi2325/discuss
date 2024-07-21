@@ -2,12 +2,12 @@ import { notFound } from 'next/navigation';
 import { db } from '@/db';
 
 interface PostShowProps {
-  postID: string;
+  postId: string;
 }
 
-export default async function PostShow({ postID }: PostShowProps) {
+export default async function PostShow({ postId }: PostShowProps) {
   const post = await db.post.findFirst({
-    where: { id: postID }
+    where: { id: postId }
   });
 
   if (!post) {
